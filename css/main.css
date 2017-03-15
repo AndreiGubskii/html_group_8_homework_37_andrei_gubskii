@@ -1,0 +1,118 @@
+body{font-family:"Myriad Pro", sans-serif;}
+a,a:hover,a:active{
+	text-decoration: none;
+	color: black;
+}
+.container{
+	width: 100%;
+	max-width: 940px;
+	margin: 0 auto;
+}
+.restaurant .title{
+	font-size: 52px;
+	color: rgb(17,17,17);
+	font-weight: 400;
+	margin: 40px 0 25px 0;
+}
+.middle-box{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 5px;
+}
+.text-box{
+	font-size: 18px;
+	color: rgb(68,68,68);
+	line-height: 1.6;
+}
+.text-box{
+	flex-basis: 65%;
+}
+.map-box{
+	flex-basis: 35%;
+	position: relative;
+}
+.map-box img{
+	margin: -52px 0 0 8px;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.icon{
+	background-size: cover;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+}
+.icon-1{
+	background: url(../images/icon-sprite.png) 0 0 no-repeat;	
+}
+.icon-2{
+	background: url(../images/icon-sprite.png) -41px 0 no-repeat;	
+}
+.icon-3{
+	background: url(../images/icon-sprite.png) -83px 0 no-repeat;	
+}
+
+.map-btn{
+	background: url(../images/plus.svg) 0 0 no-repeat;
+	width: 35px;
+	height: 35px;
+	display: block;
+	position: absolute;
+    top: 22%;
+    right: 52%;
+}
+.map-btn:hover + .show-map-popup{
+	opacity: 1;
+}
+.show-map-popup{
+	position: absolute;
+	top: 39%;
+	right: 33%;
+	background: #fff;
+	padding: 5px 15px 5px 10px;
+	font-size: 17px;
+	opacity: 0;
+	transition: 0.5s all;
+}
+.show-map-popup::before {
+	content: "";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 10px 10px 10px;
+	border-color: transparent transparent #ffffff transparent;
+	position: absolute;
+	top: -10px;
+	right: 45%;
+}
+
+.button{
+	display: inline-block;
+	border: none;
+	outline: none;
+	box-shadow: 0 0 0 2px #FA7205;
+	color: #FA7205;
+	margin: 10px 18px 0 0;
+	padding: 15px 60px 12px 26px;
+	font-size: 15px;
+	text-transform: uppercase;
+	box-sizing: border-box;
+	font-weight: bold;
+}
+.button:hover{
+	background: #FA7205;
+	color: #fff;
+}
+.show-menu{
+	padding-right: 67px;
+	background: url(../images/icon-chevron.svg) 174px center no-repeat;
+	background-size: 20px;
+}
+.show-menu:hover{
+	background: url(../images/icon-chevron_1.svg) 174px center no-repeat, #FA7205;;
+	background-size: 20px;
+}
+
