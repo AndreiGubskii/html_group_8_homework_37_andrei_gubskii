@@ -4,9 +4,12 @@ a,a:hover,a:active{
 	color: black;
 }
 .container{
-	width: 100%;
-	max-width: 940px;
+	width: 95%;
+	max-width: 987px;
 	margin: 0 auto;
+}
+.restaurant{
+	padding: 0 20px;
 }
 .restaurant .title{
 	font-size: 52px;
@@ -17,7 +20,8 @@ a,a:hover,a:active{
 .middle-box{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
+	flex-direction: column-reverse;
 	margin-top: 5px;
 }
 .text-box{
@@ -26,17 +30,21 @@ a,a:hover,a:active{
 	line-height: 1.6;
 }
 .text-box{
-	flex-basis: 65%;
+	flex-basis: 100%;
+	text-align: justify;
+	margin-top: 30px;
 }
 .map-box{
-	flex-basis: 35%;
+	flex-basis: 100%;
 	position: relative;
 }
 .map-box img{
-	margin: -52px 0 0 8px;
 	display: block;
 	width: 100%;
+	max-width: 315px;
+	margin: 0 auto;
 	height: auto;
+
 }
 .icon{
 	background-size: cover;
@@ -53,49 +61,40 @@ a,a:hover,a:active{
 .icon-3{
 	background: url(../images/icon-sprite.png) -83px 0 no-repeat;	
 }
-
+.buttons-box{
+	margin-top: 16px;
+}
 .map-btn{
 	background: url(../images/plus.svg) 0 0 no-repeat;
 	width: 35px;
 	height: 35px;
 	display: block;
 	position: absolute;
-    top: 22%;
-    right: 52%;
+	bottom: -37px;
+	right: 0;
+	z-index: 1;
 }
-.map-btn:hover + .show-map-popup{
-	opacity: 1;
+.wrap{
+	position: relative;
 }
+
 .show-map-popup{
 	position: absolute;
-	top: 39%;
-	right: 33%;
+	bottom: -38px;
+	right: 9%;
 	background: #fff;
 	padding: 5px 15px 5px 10px;
 	font-size: 17px;
-	opacity: 0;
-	transition: 0.5s all;
-}
-.show-map-popup::before {
-	content: "";
-	display: inline-block;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 10px 10px 10px;
-	border-color: transparent transparent #ffffff transparent;
-	position: absolute;
-	top: -10px;
-	right: 45%;
+	opacity: 1;
 }
 
 .button{
-	display: inline-block;
+	display: block;
 	border: none;
 	outline: none;
 	box-shadow: 0 0 0 2px #FA7205;
 	color: #FA7205;
-	margin: 10px 18px 0 0;
+	margin: 20px auto;
 	padding: 15px 60px 12px 26px;
 	font-size: 15px;
 	text-transform: uppercase;
@@ -108,11 +107,72 @@ a,a:hover,a:active{
 }
 .show-menu{
 	padding-right: 67px;
-	background: url(../images/icon-chevron.svg) 174px center no-repeat;
+	background: url(../images/icon-chevron.svg) 89% center no-repeat;
 	background-size: 20px;
 }
 .show-menu:hover{
-	background: url(../images/icon-chevron_1.svg) 174px center no-repeat, #FA7205;;
+	background: url(../images/icon-chevron_1.svg) 89% center no-repeat, #FA7205;;
 	background-size: 20px;
 }
+@media screen and (min-width: 520px){
+	.button{
+		width: 50%;
+	}
+}
+@media screen and (min-width: 940px){
+	.middle-box{
+		justify-content: space-between;
+		flex-direction: row;
+	}
+	.text-box{
+		flex-basis: 65%;
+		text-align: left;
+		margin-top: 0;
+	}
+	.map-box{
+		flex-basis: 35%;
+	}
+	.map-box img{
+		display: block;
+		width: 100%;
+		height: auto;
+		position: absolute;
+		top: -50px;
+		right: 7px;
+	}
+	.buttons-box{
+		margin-top: 42px;
+	}
+	.button{
+		display: inline-block;
+		width: auto;
+		margin: 10px 18px 0 0;
+	}
+	.show-map-popup{
+		opacity: 0;
+		bottom: -137px;
+		right: 34%;
+		background: #fff;		
+		transition: 0.5s all;
+	}
+	.show-map-popup::before {
+		content: "";
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 10px 10px 10px;
+		border-color: transparent transparent #ffffff transparent;
+		position: absolute;
+		bottom: 95%;
+		right: 45%;
+	}
+	.map-btn{
+		bottom: -95px;
+		right: 53%;
+	}
+		.map-btn:hover + .show-map-popup{
+			opacity: 1;
+		}
+	}
 
